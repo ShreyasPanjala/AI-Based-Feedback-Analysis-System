@@ -1,0 +1,17 @@
+.m2-repository/
+**/node_modules/
+**/target/
+**/venv/
+**/.venv/
+**/__pycache__/
+*.pyc
+**/dist/
+**/coverage/
+.env
+.env.*
+**/.env
+**/.env.*
+**/.idea/
+**/.vscode/
+*.log
+.DS_Store
