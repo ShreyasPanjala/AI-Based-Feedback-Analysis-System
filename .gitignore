@@ -1,0 +1,61 @@
+# ─── Java / Maven ─────────────────────────────────────────────────────────────
+feedback-ai/backend/target/
+*.class
+*.jar
+*.war
+*.ear
+*.nar
+!**/src/main/**/target/
+!**/src/test/**/target/
+
+# ─── Node.js / Vite ───────────────────────────────────────────────────────────
+feedback-ai/frontend/node_modules/
+feedback-ai/frontend/dist/
+feedback-ai/frontend/.vite/
+
+# ─── Python ───────────────────────────────────────────────────────────────────
+feedback-ai/sentiment-service/__pycache__/
+feedback-ai/sentiment-service/*.pyc
+feedback-ai/sentiment-service/*.pyo
+feedback-ai/sentiment-service/.venv/
+feedback-ai/sentiment-service/venv/
+*.egg-info/
+dist/
+build/
+*.egg
+
+# ─── IDE / Editors ────────────────────────────────────────────────────────────
+.idea/
+*.iml
+*.ipr
+*.iws
+.vscode/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# ─── OS ───────────────────────────────────────────────────────────────────────
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+
+# ─── Environment / Secrets ────────────────────────────────────────────────────
+.env
+.env.local
+.env.*.local
+*.env
+
+# ─── Logs ─────────────────────────────────────────────────────────────────────
+*.log
+logs/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
