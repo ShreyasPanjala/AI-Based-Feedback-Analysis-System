@@ -48,14 +48,13 @@ Spring Boot is the primary backend. It owns REST APIs, business logic, validatio
 ## Project Structure
 
 ```text
-feedback-ai/
+AI-Based-Feedback-Analysis-System/
 ├── backend/            Spring Boot API, services, entities, repositories, tests
 ├── frontend/           React pages, API client, charts, styles
 ├── sentiment-service/  FastAPI VADER analyzer
+├── .gitignore
 └── README.md
 ```
-
-The repository-level `.gitignore` sits one directory above `feedback-ai/` in this checkout.
 
 ## Installation and Startup
 
@@ -70,17 +69,17 @@ Set `DB_USERNAME` and `DB_PASSWORD` in the backend's environment. `backend/src/m
 ### Python (PowerShell)
 
 ```powershell
-cd feedback-ai/sentiment-service
+cd sentiment-service
 py -m venv .venv
 .\.venv\Scripts\Activate.ps1
 pip install -r requirements.txt
-uvicorn main:app --reload --port 8000
+python -m uvicorn main:app --reload --port 8000
 ```
 
 ### Spring Boot (a second terminal)
 
 ```powershell
-cd feedback-ai/backend
+cd backend
 $env:DB_USERNAME = 'root'
 $env:DB_PASSWORD = '<your MySQL password>'
 mvn clean install
@@ -92,7 +91,7 @@ Use Java 17 or newer. On the verified Windows machine, Maven is available in Int
 ### React (a third terminal)
 
 ```powershell
-cd feedback-ai/frontend
+cd frontend
 npm install
 npm run dev
 npm run build
