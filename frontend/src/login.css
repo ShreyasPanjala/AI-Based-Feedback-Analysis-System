@@ -1,0 +1,24 @@
+.demo-banner{max-width:1220px;margin:16px auto 0;padding:12px 18px;border-radius:10px;background:#fff4db;border:1px solid #f4d89b;color:#735517;font-size:13px;line-height:1.5}
+.demo-banner strong{color:#604208}
+.nav-signout{border:0;background:transparent;color:#68778c;border-radius:9px;padding:10px 16px;font-weight:700;font-size:14px;cursor:pointer}
+.nav-signout:hover{color:#3b5bc1;background:#edf1ff}
+.login-layout{max-width:890px;margin:42px auto;display:grid;grid-template-columns:minmax(0,1.3fr) minmax(230px,.8fr);gap:22px;align-items:start}
+.login-panel{padding:36px}
+.login-panel h1{font-size:30px;margin:0 0 8px}
+.login-intro{color:#758397;line-height:1.5;margin-bottom:25px}
+.login-panel form{display:grid;gap:17px}
+.login-panel label{display:grid;gap:8px;color:#34445c;font-size:13px;font-weight:700}
+.login-panel input{border:1px solid #dce3ed;border-radius:9px;background:#fff;color:#26364e;padding:12px 13px;outline:none;width:100%}
+.login-panel input:focus{border-color:#5574de;box-shadow:0 0 0 3px #5574de23}
+.login-panel form .button{justify-self:start;margin-top:4px}
+.button-secondary{background:#edf1ff;color:#3b5bc1}
+.button-secondary:hover{background:#e0e7ff}
+.guest-option{border-top:1px solid #e8edf4;margin-top:28px;padding-top:22px}
+.guest-option p{color:#68778c;font-size:13px;margin-bottom:12px}
+.guest-option .fine-print{margin:18px 0 0}
+.fine-print{font-size:12px;line-height:1.5;color:#7b899c}
+.login-info{border-radius:14px;background:#edf1ff;padding:31px;color:#40537b}
+.login-info h2{font-size:20px;margin:16px 0 9px}
+.login-info p{line-height:1.6;font-size:14px}
+.login-info .fine-print{margin-top:28px}
+@media(max-width:700px){.login-layout{grid-template-columns:1fr;margin:16px auto}.login-panel{padding:24px}.login-info{display:none}.demo-banner{margin:12px 16px 0}}

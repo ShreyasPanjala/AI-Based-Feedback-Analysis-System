@@ -52,6 +52,7 @@ AI-Based-Feedback-Analysis-System/
 ├── backend/            Spring Boot API, services, entities, repositories, tests
 ├── frontend/           React pages, API client, charts, styles
 ├── sentiment-service/  FastAPI VADER analyzer
+├── DEPLOYMENT.md        Local setup and public hosting guide
 ├── .gitignore
 └── README.md
 ```
@@ -65,6 +66,8 @@ CREATE DATABASE feedback_ai;
 ```
 
 Set `DB_USERNAME` and `DB_PASSWORD` in the backend's environment. `backend/src/main/resources/application.properties` defaults the username to `root` and uses a non-secret placeholder for the password. Do not put a real password in that file. The backend calls `http://localhost:8000` by default; set `SENTIMENT_SERVICE_URL` if Python runs elsewhere.
+
+For public hosting and the MySQL Workbench steps, see [DEPLOYMENT.md](DEPLOYMENT.md). The ChatGPT Sites build runs as a clearly labeled browser-local demo until a public Spring Boot API is configured.
 
 ### Python (PowerShell)
 
@@ -108,7 +111,7 @@ npm run build
 
 ## API Documentation
 
-Protected endpoints use HTTP Basic demo credentials `admin:admin123`. The frontend uses these credentials to load reports, users, and feedback. They are intended for a local hackathon demo only.
+Protected endpoints use HTTP Basic. The local demo defaults to `admin:admin123`; set `ADMIN_USERNAME` and `ADMIN_PASSWORD` before public deployment. The frontend asks for these credentials at sign-in and keeps them only in memory for the current tab.
 
 | Method | Endpoint | Purpose | Authentication |
 |---|---|---|---|
@@ -142,4 +145,4 @@ Example feedback request:
 
 ## Future Improvements
 
-Possible later work includes transformer-based and multilingual sentiment, topic extraction, automatic summaries, email alerts, stronger authentication and role management, and deployment. These are not part of this MVP.
+Possible later work includes transformer-based and multilingual sentiment, topic extraction, automatic summaries, email alerts, and stronger authentication and role management. These are not part of this MVP.

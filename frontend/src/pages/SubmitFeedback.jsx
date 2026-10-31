@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { api, adminApi, errorMessage } from '../api/api'
+import { api, adminApi, demoMode, errorMessage } from '../api/api'
 import SentimentBadge from '../components/SentimentBadge'
 
 export default function SubmitFeedback() {
@@ -49,7 +49,7 @@ export default function SubmitFeedback() {
       <div className="panel-heading"><h2>New feedback</h2><p>All fields are required.</p></div>
       {loadingOptions && <div className="notice">Loading users and categories…</div>}
       {error && <div className="notice notice-error" role="alert">{error}</div>}
-      {success && <div className="notice notice-success" role="status"><strong>Feedback submitted successfully.</strong><span>Detected Sentiment: <SentimentBadge value={success.sentiment} /></span></div>}
+      {success && <div className="notice notice-success" role="status"><strong>{demoMode ? 'Saved in this browser.' : 'Feedback submitted successfully.'}</strong><span>{demoMode ? 'Analysis requires the Java and Python services:' : 'Detected Sentiment:'} <SentimentBadge value={success.sentiment} /></span></div>}
       <form onSubmit={submit}>
         <div className="form-row">
           <label>User<select name="userId" value={form.userId} onChange={update} required><option value="">Select a user</option>{users.map(user => <option key={user.id} value={user.id}>{user.name}</option>)}</select></label>
